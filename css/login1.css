@@ -1,0 +1,61 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-image: url("../image/proba1.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+h1 {
+    padding-top: 40px;
+    color: rgb(245, 245, 245);
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.562);
+    display: block;
+    border-radius: 10px;
+}
+
+.login-input {
+    width: 90%;
+    padding: 15px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.login-button {
+    background: rgb(3, 61, 63);
+    color: white;
+    font-size: medium;
+    width: 50%;
+    line-height:40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    opacity: 90%;
+    color: rgb(24, 176, 223);
+}
+
+.container {
+    padding: 16px;
+}
+
+.login-form {
+    border-radius: 2px;
+    margin: 10px auto 30px;
+    max-width: 38%;
+    padding: 50px 70px 70px 71px;
+    text-align: center;
+}
+
+
+
+
+

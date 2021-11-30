@@ -1,0 +1,21 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    color: whitesmoke;
+    text-align: center;
+}
+
+body{
+    background-image: url("../image/proba2.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+button:hover {
+    border: 1px solid grey;
+    color: rgb(24, 176, 223);
+    opacity: 90%;
+}
+

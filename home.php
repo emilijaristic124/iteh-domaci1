@@ -38,7 +38,7 @@
 <body>
 
     <div>
-        <h1>Ema's game list</h1> 
+        <h1>Game list</h1> 
     </div>
 
     <div class="row" style="background-color: rgba(10, 65, 82, 0.0); border: none">
@@ -127,6 +127,10 @@
                         <form action="#" method="post" id="addGameForm">
                             <div class="row">
                                 <div class="col-md-8">
+                                    <div class="form-group">
+                                        <input  type="text" style="border: 1px solid black" name="userId" class="form-control"
+                                           placeholder="User ID" value="<?php echo $_SESSION['user_id'] ?>" readonly/> 
+                                    </div>
                                     <div class="form-group">
                                         <input  type="text" style="border: 1px solid black" name="gameName" class="form-control"
                                            placeholder="Game name" value=""/> 

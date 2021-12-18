@@ -5,19 +5,21 @@ class Game
     public $name;
     public $type;
     public $price;
+    public $userId;
     
-    public function __construct($id = null, $name = null, $type = null, $price = null)
+    public function __construct($id = null, $name = null, $type = null, $price = null, $userId= -1)
     {
         $this->id = $id;
         $this->name = $name;
         $this->type = $type;
         $this->price = $price;
-        
+        $this->userId= $userId;
     }
 
     public static function getAllGames(mysqli $connection)
     {
-        $q = "SELECT * FROM game";
+        $userId= $_SESSION['user_id'];
+        $q = "SELECT * FROM game where userId= $userId";
         return $connection->query($q);
     }
 
@@ -40,9 +42,9 @@ class Game
         return $connection->query($q);
     }
 
-    public static function addGame($name, $type, $price, mysqli $connection)
+    public static function addGame($name, $type, $price, $userId=-1, mysqli $connection)
     {
-        $q = "INSERT INTO game(name,type,price) values('$name','$type', '$price')";
+        $q = "INSERT INTO game(name,type,price,userId) values('$name','$type', '$price','$userId')";
         return $connection->query($q);
     }
 

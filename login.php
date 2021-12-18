@@ -5,10 +5,10 @@
  session_start();
 
  if(isset($_GET['username']) && isset($_GET['password'])) {
-     $uname=$_GET['username'];
+     $username=$_GET['username'];
      $password=$_GET['password'];
 
-    $rs = User::logInUser($uname, $password, $connection);
+    $rs = User::logInUser($username, $password, $connection);
 
 
       if($rs->num_rows==1) {

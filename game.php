@@ -42,7 +42,7 @@ class Game
         return $connection->query($q);
     }
 
-    public static function addGame($name, $type, $price, $userId=-1, mysqli $connection)
+    public static function addGame($name, $type, $price, $userId, mysqli $connection)
     {
         $q = "INSERT INTO game(name,type,price,userId) values('$name','$type', '$price','$userId')";
         return $connection->query($q);

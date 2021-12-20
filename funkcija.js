@@ -25,7 +25,6 @@ $('#btnDeleteGame').click(function () {
 $('#addGameForm').submit(function () {
     event.preventDefault();
     const $form = $(this);
-    const $inputs = $form.find('input, select, button,textarea');
     const serializedData = $form.serialize();
 
     request = $.ajax({
@@ -76,7 +75,6 @@ $('#btnEditGame').click(function () {
 $('#editGameForm').submit(function () {
     event.preventDefault();
     const $form = $(this);
-    const $inputs = $form.find('input, select, button');
     const serializedData = $form.serialize();
 
     request = $.ajax({

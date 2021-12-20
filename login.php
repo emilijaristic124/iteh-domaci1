@@ -19,7 +19,7 @@
       } else {
       
           echo '<script type="text/javascript">alert("Try again :("); 
-                                                window.location.href = "http://localhost/domaci/login.php";</script>';
+                                                window.location.href = "http://localhost/iteh-domaci1/login.php";</script>';
           exit();
       }
  }

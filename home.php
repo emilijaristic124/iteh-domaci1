@@ -4,10 +4,7 @@
 
     session_start();
 
-    if (!isset($_SESSION['user_id'])) {
-        header('Location: login.php');
-        exit();
-    } elseif (isset($_GET['logout']) && !empty($_GET['logout'])) {
+   if (isset($_GET['logout']) && !empty($_GET['logout'])) {
         session_unset();
         session_destroy();
         header("Location: login.php");
@@ -16,7 +13,7 @@
     $games = Game::getAllGames($connection);
 
     if (!$games) {
-        echo "Nastala je greška pri izvođenju upita<br>";
+        echo "Nastala je greška pri izvođenju upita.";
         die();
     }
 
@@ -244,8 +241,6 @@
                     val2 = col2.textContent;
                     if (val1.toLowerCase().indexOf(modified) > -1 || val2.toLowerCase().indexOf(modified) > -1) {
                         row[i].style.display = "";
-                        console.log("naso sam:");
-                        console.log(row[i]);
                     } else {
                         row[i].style.display = "none";
                     }
